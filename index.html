@@ -1,42 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <title>Work Details Form</title>
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header>
-      <h1>Work Details Form</h1>
+      <h1>My Website</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-      <p>Please fill out the form below with details about the work you've done:</p>
-      <form>
-        <label for="work-type">Work Type:</label>
-        <input type="text" id="work-type" name="work-type" required>
-        <label for="hours">Hours Worked:</label>
-        <input type="number" id="hours" name="hours" required>
-        <label for="rate">Hourly Rate:</label>
-        <input type="number" id="rate" name="rate" required>
-        <button type="submit" onclick="submitForm(event)">Submit</button>
-      </form>
+      <h2>Welcome to My Website</h2>
+      <p>This is the first page of my website. Feel free to explore the site using the navigation above.</p>
     </main>
-    <script>
-      function submitForm(event) {
-        event.preventDefault();
-        const workType = document.getElementById('work-type').value;
-        const hours = document.getElementById('hours').value;
-        const rate = document.getElementById('rate').value;
-        const total = hours * rate;
-        const workDetails = {workType, hours, rate, total};
-        console.log(workDetails);
-        const jsonData = JSON.stringify(workDetails);
-        console.log(jsonData);
-        alert('Form submitted successfully!');
-        document.getElementById('work-type').value = '';
-        document.getElementById('hours').value = '';
-        document.getElementById('rate').value = '';
-      }
-    </script>
+    <footer>
+      <p>&copy; 2023 My Website. All rights reserved.</p>
+    </footer>
   </body>
 </html>
-
